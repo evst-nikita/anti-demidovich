@@ -1,0 +1,36 @@
+№ 41
+
+Пусть
+$$
+x_n = \frac{n}{n + 1} \quad(n = 1, 2, \ldots).
+$$
+Доказать, что
+$$
+\lim_{n \rightarrow \infty}{x_n = 1}
+$$
+Определив для каждого $\varepsilon > 0$ число $N = N(\varepsilon)$ такое, что
+$$
+|x_n - 1| < \varepsilon,\mbox{ если } n > N
+$$
+Заполнить следующую таблицу:
+
+| $\varepsilon$ | $0,1$ | $0,01$ | $0,001$ | $0,0001$ | $\ldots$ |
+| ------------- | ----- | ------ | ------- | -------- | -------- |
+| $N$           |       |        |         |          |          |
+% Не забыть потом переделать её в gpt
+
+\medskip
+
+По факту, очевидно, что $\frac{n}{n + 1} < 1$ так, что мы можем раскрыть модуль в таком виде:
+$$
+|x_n - 1| < \varepsilon \Leftrightarrow \left|\frac{n}{n + 1} - 1\right| < \varepsilon \Leftrightarrow 1 - \frac{n}{n + 1} < \varepsilon
+$$
+Нам осталось только решить неравенство. 
+$$
+1 - \frac{n}{n + 1} < \varepsilon \Leftrightarrow n + 1 - n < n\varepsilon + \varepsilon \Leftrightarrow n\varepsilon > 1 - \varepsilon \Leftrightarrow n > \frac{1 - \varepsilon}{\varepsilon} 
+$$
+Теперь подставим $\varepsilon$ из таблицы и посчитаем N:
+
+| $\varepsilon$ | $0,1$ | $0,01$ | $0,001$ | $0,0001$ | $\ldots$                              |
+| ------------- | ----- | ------ | ------- | -------- | ------------------------------------- |
+| $N$           | 9     | 99     | 999     | 9999     | $\frac{1 - \varepsilon}{\varepsilon}$ |
